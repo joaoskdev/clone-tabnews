@@ -4,8 +4,8 @@ on: pull_request
 
 jobs:
   jest:
-    name: Jest Ubuntu
-    runs-un: ubuntu-latesd
+    name: Jest-Ubuntu
+    runs-on: ubuntu-latesd
     steps:
       - uses: actions/checkout@v4
 
