@@ -31,7 +31,7 @@ function UpdatedAt({ isLoading, data }) {
 }
 
 function MaxConnections({ isLoading, data }) {
-  let maxConnections = "Carregando...";
+  let maxConnections = "Carregando123";
   if (!isLoading && data) {
     maxConnections = data.dependencies.database.max_connections;
   }
