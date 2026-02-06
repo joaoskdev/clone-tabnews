@@ -8,9 +8,10 @@ async function query(queryObject) {
     return result;
   } catch (error) {
     console.error(error);
+    console.log("\n Erro dento do catch do database.js:");
     throw error;
   } finally {
-    await client.end();
+    await client?.end();
   }
 }
 
