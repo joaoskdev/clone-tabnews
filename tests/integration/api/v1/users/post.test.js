@@ -77,7 +77,7 @@ describe("POST /api/v1/users", () => {
       });
     });
     test("With duplicated 'username'", async () => {
-      const response = await fetch("http://localhost:3000/api/v1/users", {
+      const response1 = await fetch("http://localhost:3000/api/v1/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -88,6 +88,8 @@ describe("POST /api/v1/users", () => {
           password: "123",
         }),
       });
+
+      expect(response1.status).toBe(201);
 
       const response2 = await fetch("http://localhost:3000/api/v1/users", {
         method: "POST",
